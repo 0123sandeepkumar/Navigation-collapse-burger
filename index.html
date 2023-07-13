@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Navigation menu */
+    .navbar {
+      background-color: #333;
+      padding: 20px;
+    }
+
+    /* Navigation menu items */
+    .nav-items {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Navigation menu item */
+    .nav-item {
+      margin-right: 20px;
+    }
+
+    /* Navigation menu link */
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Burger icon */
+    .burger-icon {
+      display: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .nav-items {
+        display: none;
+      }
+
+      .burger-icon {
+        display: block;
+      }
+
+      .nav-items.collapse {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-items.collapse .nav-item {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-items">
+      <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="burger-icon">&#9776;</div>
+  </nav>
+
+  <script>
+    // Toggle navigation menu on burger icon click
+    document.querySelector('.burger-icon').addEventListener('click', function() {
+      document.querySelector('.nav-items').classList.toggle('collapse');
+    });
+  </script>
+</body>
+</html>
